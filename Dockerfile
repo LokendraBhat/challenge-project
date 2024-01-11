@@ -22,8 +22,7 @@ php -r "unlink('composer-setup.php');"
 RUN mv composer.phar /usr/local/bin/composer
 
 # Install dependencies inside composer
-RUN composer install 
-# --ignore-platform-reqs
+RUN composer install --ignore-platform-reqs
 
 # Expose port 80
 EXPOSE 80
