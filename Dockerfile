@@ -19,8 +19,9 @@ php composer-setup.php && \
 php -r "unlink('composer-setup.php');"
 
 ## To make composer.phar execute from any dir uncomment this
-#sudo mv composer.phar /usr/local/bin/composer
+RUN mv composer.phar /usr/local/bin/composer
 
+# Install dependencies inside composer
 RUN composer install --ignore-platform-reqs
 
 # Expose port 80
