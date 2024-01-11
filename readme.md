@@ -47,5 +47,19 @@ docker run -d -p 80:80 lokendrabhat/php_project:1.0
 # Finally pushed to my DockerHub 
 docker push lokendrabhat/php_project:1.0
 
+</code>
+
+
+## Task 3
+<code>
+# Download docker-compose
+sudo apt install -y docker-compose
+# Check download
+docker-compose --version
+
+# create a docker compose file
+touch docker-compose.yml
+# write using any editing tools vim, nano, VS-code (I used VS-code for that)
+
 
 </code>
