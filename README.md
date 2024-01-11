@@ -32,8 +32,8 @@ After successfully running a project on a local machine I write a Dockerfile and
 Make sure to check the port available locally using the command <code>sudo lsof -i :80</code> or other commands
 <br><code>docker run -d -p 80:80 lokendrabhat/php_project:1.0 </code><br>
 Finally pushed to my DockerHub 
-<br><code>docker push lokendrabhat/php_project:1.0</code><br>
-<img width="100%" alt="dockerhub" src="./output-img/docker_hub_out.jpg"/>
+<br><code>docker push lokendrabhat/php_project:1.0</code><br><br>
+<img width="50%" alt="dockerhub" src="./output-img/docker_hub_out.jpg"/><br>
 
 ## Task 3
 - Downloaded docker-compose
@@ -50,7 +50,7 @@ Finally pushed to my DockerHub
 <br><code> docker-compose up -d </code><br>
 
 # Output:
-<br><img width="100%" alt="docker-compose-output" src="./output-img/docker_compose_out.jpg"/><br>
+<br><img width="50%" alt="docker-compose-output" src="./output-img/docker_compose_out.jpg"/><br>
 - To down the container
 <br><code> docker-compose down </code><br>
 
