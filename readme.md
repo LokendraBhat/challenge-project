@@ -31,6 +31,21 @@ Steps I followed:
 # replaced <given-repo-url> with https://github.com/silarhi/php-hello-world.git </code>
 2.1.1: Creating Dockerfile for building a docker image of the cloned application.
 <code> 
-vim Dockerfile
+touch Dockerfile
+
+# After many tries I try to solve error using logs and ofcource with the help of google. I build a entry point for given project where I institiated class Hello()
+
+vim index.php
+
+# After successfully run a project on local machine I write  Dockerfile and then build and run as:
+
+docker build -t lokendrabhat/php_project:1.0 .
+
+# Make sure to check port available locally using command sudo lsof -i :80 or other
+docker run -d -p 80:80 lokendrabhat/php_project:1.0
+
+# Finally pushed to my DockerHub 
+docker push lokendrabhat/php_project:1.0
+
 
 </code>
