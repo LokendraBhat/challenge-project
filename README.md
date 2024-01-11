@@ -18,7 +18,8 @@ Steps I followed:
 	git add .
 	git commit –m “<commit-message>”
 	 git status    # used this to check the status of my working branch
-  </code>
+</code>
+
 1.3: It’s very important to permit to .sh file to execute 
 	<code> chmod +x dockerinstaller.sh
 	 ./dockerinstaller.sh  # to run the script
@@ -97,7 +98,5 @@ jenkins --version
 service jenkins status
 
 # Now, your jenkins run on default site: http://localhost:8080. Where required configuration done and plugins are installed
-
-
 
 </code>
