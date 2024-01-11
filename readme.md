@@ -61,5 +61,43 @@ docker-compose --version
 touch docker-compose.yml
 # write using any editing tools vim, nano, VS-code (I used VS-code for that)
 
+# check docker-compose file
+docker-compose config
+
+# up the container
+docker-compose up -d
+
+# down the container
+docker-compose down
+
+</code>
+
+
+## Task 4
+<code>
+
+# Installed jenkins with the help of official jenkins website
+
+# for that first Install Java
+sudo apt update
+sudo apt install fontconfig openjdk-17-jre
+java -version
+
+# Now Jenkins
+sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins
+
+# check jenkins installation
+jenkins --version
+service jenkins status
+
+# Now, your jenkins run on default site: http://localhost:8080. Where required configuration done and plugins are installed
+
+
 
 </code>
