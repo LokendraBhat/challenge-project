@@ -22,7 +22,7 @@ git status</code><br>
 
 ## Task 2
 2.1: Cloned the given GitHub repository using the command
-<br><code> git clone <given-repo-url>  </code><br>
+<br><code> git clone replace-url </code><br>
 2.1.1: Creating Dockerfile for building a docker image of the cloned application.
 <br><code> touch Dockerfile </code><br>
 After many tries, I try to solve the error using logs and with the help of Google. I build an entry point for a given project where I instantiated class Hello()
