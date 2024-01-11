@@ -9,10 +9,10 @@ cd intuji-devops-internship-challenge</code>
 - Initialized the git in that repository (Note: I already installed git)
 <br><code>git init </code><br>
 - Create a file using the following command and write the required script to download docker using the help of the docker official page from where I observe the commands used in Ubuntu for download. And then save written contents (esc + :wq for vim)
-<br><code>vim dockerinstaller.sh<code><br>
+<br><code>vim dockerinstaller.sh </code><br>
 - Perform required git commands after each step as(for example):
 <br><code>git add . 
-git commit –m “<commit-message>”
+git commit –m “message”
 git status</code><br>
 
 1.3: It’s very important to permit to .sh file to execute 
