@@ -2,10 +2,9 @@ version: '3'
 
 services:
   app:
-    build: .
-    image: php-app
-    
-  ports:
-    - "8093:80"
-  volumes:
-    - ./php-hello-world:/var/www/html
+    ## build Dockerfile from current location
+    # build: . 
+    ## OR fetch image from dockerhub
+    image: lokendrabhat/php_project:1.0   
+    ports:
+      - "8093:80"
