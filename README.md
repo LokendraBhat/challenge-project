@@ -1,102 +1,85 @@
 Steps I followed:
 ## Task 1
-1.1: Open VM with Ubuntu 22.04 version and perform
-<code>	
-# change directory 
-	cd ~/Desktop/DevOps/
-	# Create a new directory named “intuji-devops-internship-challenge” 
-	 mkdir intuji-devops-internship-challenge
-	 cd intuji-devops-internship-challenge
-</code>
+1.1: Open VM with Ubuntu 22.04 version and perform 
+<code>cd ~/Desktop/DevOps/
+mkdir intuji-devops-internship-challenge
+cd intuji-devops-internship-challenge</code>
+
 1.2: Inside the directory 
-<code>	
-# initialized the git in that repository (Note: I already installed git)
-	git init
-# Create a file using the following command and write the required script to download docker using the help of the docker official page from where I observe the commands used in Ubuntu for download. And then save written contents (esc + :wq for vim)
-	vim dockerinstaller.sh
-	# Perform required git commands after each step as(for example):
-	git add .
-	git commit –m “<commit-message>”
-	 git status    # used this to check the status of my working branch
-</code>
+a) initialized the git in that repository (Note: I already installed git)
+<code>git init </code>
+b) Create a file using the following command and write the required script to download docker using the help of the docker official page from where I observe the commands used in Ubuntu for download. And then save written contents (esc + :wq for vim)
+<code>vim dockerinstaller.sh<code>
+Perform required git commands after each step as(for example):
+<code>git add . 
+git commit –m “<commit-message>”
+git status</code>
 
 1.3: It’s very important to permit to .sh file to execute 
 	<code> chmod +x dockerinstaller.sh
 	 ./dockerinstaller.sh  # to run the script
 	</code>
 
-
 ## Task 2
 2.1: Cloned the given GitHub repository using the command
-<code> git clone <given-repo-url>   
-# replaced <given-repo-url> with https://github.com/silarhi/php-hello-world.git </code>
+<code> git clone <given-repo-url>  </code>
 2.1.1: Creating Dockerfile for building a docker image of the cloned application.
-<code> 
-touch Dockerfile
+<code> touch Dockerfile </code>
 
-# After many tries I try to solve error using logs and ofcource with the help of google. I build a entry point for given project where I institiated class Hello()
+After many tries, I try to solve the error using logs and with the help of Google. I build an entry point for a given project where I instantiated class Hello()
+<code>vim index.php</code>
 
-vim index.php
+After successfully running a project on a local machine I write a Dockerfile and then build and run it as:
+<code>docker build -t lokendrabhat/php_project:1.0 . </code>
 
-# After successfully run a project on local machine I write  Dockerfile and then build and run as:
+Make sure to check the port available locally using the command <code>sudo lsof -i :80</code> or other commands
+<code>docker run -d -p 80:80 lokendrabhat/php_project:1.0 </code>
 
-docker build -t lokendrabhat/php_project:1.0 .
-
-# Make sure to check port available locally using command sudo lsof -i :80 or other
-docker run -d -p 80:80 lokendrabhat/php_project:1.0
-
-# Finally pushed to my DockerHub 
-docker push lokendrabhat/php_project:1.0
-
-</code>
-
+Finally pushed to my DockerHub 
+<code>docker push lokendrabhat/php_project:1.0</code>
+<img width="100%" alt="dockerhub" src="./output-img/docker_hub_out.jpg"/>
 
 ## Task 3
-<code>
-# Download docker-compose
-sudo apt install -y docker-compose
-# Check download
-docker-compose --version
+Downloaded docker-compose
+<code>sudo apt install -y docker-compose</code>
+Check download
+<code>docker-compose --version</code>
 
-# create a docker compose file
-touch docker-compose.yml
-# write using any editing tools vim, nano, VS-code (I used VS-code for that)
+created a docker-compose file
+<code>touch docker-compose.yml</code>
+write using any editing tools vim, nano, or VS-code (I used VS-code for that)
+- To check the docker-compose file
+<code> docker-compose config </code>
 
-# check docker-compose file
-docker-compose config
+- To up the container
+<code> docker-compose up -d </code>
 
-# up the container
-docker-compose up -d
-
-# down the container
-docker-compose down
-
-</code>
-
+# Output:
+<img width="100%" alt="docker-compose-output" src="./output-img/docker_compose_out.jpg"/>
+- To down the container
+  <code> docker-compose down </code>
 
 ## Task 4
-<code>
-
-# Installed jenkins with the help of official jenkins website
-
-# for that first Install Java
-sudo apt update
+Installed jenkins with the help of the official jenkins website
+- for that first Install of Java
+<code> sudo apt update
 sudo apt install fontconfig openjdk-17-jre
-java -version
+java -version </code>
 
-# Now Jenkins
-sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+- Then Jenkins
+<code> sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
   https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
 echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
 sudo apt-get update
-sudo apt-get install jenkins
+sudo apt-get install jenkins </code>
 
-# check jenkins installation
-jenkins --version
-service jenkins status
+- check Jenkins installation
+<code> jenkins --version
+service jenkins status </code>
 
-# Now, your jenkins run on default site: http://localhost:8080. Where required configuration done and plugins are installed
-
+- Now, your Jenkins runs on the default site: http://localhost:8080. Where required configuration is done and plugins are installed
+- Here is output
+  
 </code>
