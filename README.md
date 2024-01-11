@@ -72,6 +72,13 @@ sudo apt-get install jenkins </code><br>
 service jenkins status </code><br>
 
 - Now, your Jenkins runs on the default site: http://localhost:8080. Where required configuration is done and plugins are installed
+- In build step
+  <br><img width="50%" alt="jenkins-build-steps" src="./output-img/jenkins-build-step.jpg"/><br><br>
 - Here is output
-  
+  <br><img width="30%" alt="jenkins-stages" src="./output-img/jenkins-stages.jpg"/>
+  <img width="50%" alt="jenkins-output" src="./output-img/jenkins-output.jpg"/><br>
 
+  # Now try the commands in the terminal
+  <code> docker ps </code>
+  <code> docker images </code>
+  <code> curl localhost:8093 </code>
