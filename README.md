@@ -73,9 +73,9 @@ service jenkins status </code><br>
 
 - Now, your Jenkins runs on the default site: http://localhost:8080. Where required configuration is done and plugins are installed
 - In build step
-  <img width="50%" alt="jenkins-build-steps" src="./output-img/jenkins-build-step.jpg"/><br>
+  <br><img width="50%" alt="jenkins-build-steps" src="./output-img/jenkins-build-step.jpg"/><br>
 - Here is output
-  <img width="30%" alt="jenkins-stages" src="./output-img/jenkins-stages.jpg"/>
+  <be><img width="30%" alt="jenkins-stages" src="./output-img/jenkins-stages.jpg"/>
   <img width="50%" alt="jenkins-output" src="./output-img/jenkins-output.jpg"/><br>
 
   # Now try the commands in the terminal
