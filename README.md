@@ -1,4 +1,4 @@
-Steps I followed:
+Steps I followed to complete the challenge given by intuji:
 ## Task 1
 1.1: Open VM with Ubuntu 22.04 version and perform 
 <br><code>cd ~/Desktop/DevOps/
